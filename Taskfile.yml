@@ -1,0 +1,24 @@
+version: "3"
+
+tasks:
+  migcr:
+    cmd: migrate create -ext sql -dir ./migrations -seq {{.name}}
+
+  init:
+    cmds:
+      - swag init
+      - cp .env_sample .env
+
+  run:
+    cmds:
+      - docker compose -f platform/compose/docker-compose.dev.yml up -d
+      - go run main.go serve --port 8080
+
+  fmt:
+    cmd: go fmt && swag fmt
+
+  test:
+    cmd: go test ./...
+
+  build:
+    cmd: swag init && go build -o main .

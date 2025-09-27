@@ -1,0 +1,42 @@
+services:
+  db:
+    image: postgres:15
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: go_starter
+    volumes:
+      - ./_container/db_data:/var/lib/postgresql/data
+  
+  minio:
+    image: minio/minio:latest
+    ports:
+      - 9000:9000
+    environment:
+      MINIO_ACCESS_KEY: minioadmin
+      MINIO_SECRET_KEY: minioadmin
+    volumes:
+      - ./_container/minio_data:/data
+  
+  mailhog:
+    image: mailhog/mailhog:latest
+    ports:
+      - 1025:1025
+      - 1080:1080
+    volumes:
+      - ./_container/mailhog_data:/data
+
+  lgtm:
+    image: grafana/otel-lgtm:latest    
+    ports:
+      - 3000:3000
+      - 4317:4317
+      - 4318:4318
+    volumes:
+      - ./_container/grafana:/data/grafana
+      - ./_container/prometheus:/data/prometheus
+      - ./_container/loki:/data/loki    
+
+    

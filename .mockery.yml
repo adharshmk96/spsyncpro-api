@@ -1,0 +1,10 @@
+all: true
+filename: t_mocks.go
+recursive: true
+force-file-write: true
+formatter: goimports
+log-level: info
+packages:
+  go_starter_api:
+    config:
+      all: true

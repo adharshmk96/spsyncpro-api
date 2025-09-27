@@ -1,0 +1,46 @@
+# Executables and build output
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.a
+*.lib
+_test
+
+# IDE-related files
+.idea/
+.vscode/
+.DS_Store
+
+# Dependencies and caches
+/vendor/
+/go.sum
+/go.mod
+/go.work
+/go.work.sum
+
+# Test binaries and cache
+**/*_test
+
+# Local logs and temporary files
+*.log
+.env
+.env.*
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+# Database
+*.db
+*.db-journal
+*.db-lock
+*.db-trace
+*.db-wal
+*.db-shm
+*.db-trace
+*.db-wal
+*.db-shm
+
+_container
