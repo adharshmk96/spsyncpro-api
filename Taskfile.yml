@@ -1,6 +1,7 @@
 version: "3"
 
 tasks:
+  # usage: task migcr name=create_table_users
   migcr:
     cmd: migrate create -ext sql -dir ./migrations -seq {{.name}}
 
@@ -8,6 +9,7 @@ tasks:
     cmds:
       - swag init
       - cp .env_sample .env
+      - cd e2e && pnpm install
 
   run:
     cmds:
