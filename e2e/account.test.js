@@ -24,6 +24,10 @@ describe("Account module tests", () => {
   });
 
   it("should login a new account", async () => {
+    await axios.post(`${BASE_URL}/account/register`, {
+      email: "test@test.com",
+      password: "password",
+    });
     const response = await axios.post(`${BASE_URL}/account/login`, {
       email: "test@test.com",
       password: "password",

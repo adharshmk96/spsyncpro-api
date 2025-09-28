@@ -35,8 +35,11 @@ func InitGormDB() *gorm.DB {
 		panic("failed to connect database")
 	}
 
-	db.AutoMigrate(&domain.Account{})
-	db.AutoMigrate(&domain.AccountActivity{})
+	db.AutoMigrate(
+		&domain.Account{},
+		&domain.AccountActivity{},
+		&domain.Organization{},
+	)
 
 	return db
 }

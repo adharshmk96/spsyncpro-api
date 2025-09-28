@@ -2,6 +2,7 @@ package infra
 
 import (
 	"spsyncpro_api/internal/account"
+	"spsyncpro_api/internal/organization"
 	"spsyncpro_api/pkg/mailer"
 
 	"github.com/gin-gonic/gin"
@@ -30,4 +31,13 @@ func SetupRoutes(
 	rg.GET("/account/profile", accountHandler.GetProfile)
 	rg.POST("/account/logout", accountHandler.LogoutAccount)
 	rg.POST("/account/change-password", accountHandler.ChangePassword)
+
+	organizationRepository := organization.NewOrganizationRepository(db)
+	organizationService := organization.NewOrganizationService()
+	organizationHandler := organization.NewOrganizationHandler(organizationService, organizationRepository)
+
+	rg.POST("/organization/upsert", organizationHandler.UpsertOrganization)
+	rg.GET("/organization/get", organizationHandler.GetOrganization)
+	rg.DELETE("/organization/delete", organizationHandler.DeleteOrganization)
+	rg.GET("/organization/check-authorization", organizationHandler.CheckAuthorization)
 }
