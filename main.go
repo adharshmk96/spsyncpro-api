@@ -5,15 +5,15 @@ package main
 
 import (
 	"log"
-	"go_starter_api/cmd"
-	_ "go_starter_api/docs"
+	"spsyncpro_api/cmd"
+	_ "spsyncpro_api/docs"
 
 	"github.com/joho/godotenv"
 )
 
-// @title			go_starter API
+// @title			spsyncpro API
 // @version		1.0
-// @description	This is the API for the go_starter platform.
+// @description	This is the API for the spsyncpro platform.
 // @host			localhost:8080
 // @BasePath		/
 // @schemes		http

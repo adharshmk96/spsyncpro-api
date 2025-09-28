@@ -1,4 +1,4 @@
-# go_starter API
+# spsyncpro API
 
 ## Prerequisites
 

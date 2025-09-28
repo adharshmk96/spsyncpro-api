@@ -6,8 +6,8 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
-	"go_starter_api/internal/account"
-	"go_starter_api/pkg/domain"
+	"spsyncpro_api/internal/account"
+	"spsyncpro_api/pkg/domain"
 	"testing"
 
 	"github.com/gin-gonic/gin"

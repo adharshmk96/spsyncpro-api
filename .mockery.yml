@@ -5,6 +5,6 @@ force-file-write: true
 formatter: goimports
 log-level: info
 packages:
-  go_starter_api:
+  spsyncpro_api:
     config:
       all: true

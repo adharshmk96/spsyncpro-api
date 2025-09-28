@@ -2,9 +2,9 @@ package account
 
 import (
 	"errors"
-	"go_starter_api/pkg/domain"
-	"go_starter_api/pkg/utils"
 	"net/http"
+	"spsyncpro_api/pkg/domain"
+	"spsyncpro_api/pkg/utils"
 	"time"
 
 	"github.com/gin-gonic/gin"

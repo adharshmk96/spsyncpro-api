@@ -2,9 +2,9 @@ package account_test
 
 import (
 	"context"
-	"go_starter_api/internal/account"
-	"go_starter_api/pkg/domain"
-	"go_starter_api/pkg/mailer"
+	"spsyncpro_api/internal/account"
+	"spsyncpro_api/pkg/domain"
+	"spsyncpro_api/pkg/mailer"
 	"testing"
 
 	"github.com/spf13/viper"

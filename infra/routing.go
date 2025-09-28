@@ -1,8 +1,8 @@
 package infra
 
 import (
-	"go_starter_api/internal/account"
-	"go_starter_api/pkg/mailer"
+	"spsyncpro_api/internal/account"
+	"spsyncpro_api/pkg/mailer"
 
 	"github.com/gin-gonic/gin"
 	"github.com/sirupsen/logrus"

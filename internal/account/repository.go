@@ -2,7 +2,7 @@ package account
 
 import (
 	"context"
-	"go_starter_api/pkg/domain"
+	"spsyncpro_api/pkg/domain"
 
 	"go.opentelemetry.io/otel"
 	"go.opentelemetry.io/otel/trace"

@@ -2,7 +2,7 @@ package infra
 
 import (
 	"fmt"
-	"go_starter_api/pkg/domain"
+	"spsyncpro_api/pkg/domain"
 
 	"github.com/spf13/viper"
 	"gorm.io/driver/postgres"

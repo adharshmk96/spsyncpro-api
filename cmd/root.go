@@ -15,8 +15,8 @@ var cfgFile string
 
 // rootCmd represents the base command when called without any subcommands
 var rootCmd = &cobra.Command{
-	Use:   "go_starter_api",
-	Short: "api server for go_starter",
+	Use:   "spsyncpro_api",
+	Short: "api server for spsyncpro",
 }
 
 // Execute adds all child commands to the root command and sets flags appropriately.
@@ -30,7 +30,7 @@ func Execute() {
 
 func init() {
 	cobra.OnInitialize(initConfig)
-	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.go_starter_api.yaml)")
+	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.spsyncpro_api.yaml)")
 	rootCmd.Flags().BoolP("toggle", "t", false, "Help message for toggle")
 }
 
@@ -44,7 +44,7 @@ func initConfig() {
 
 		viper.AddConfigPath(home)
 		viper.SetConfigType("yaml")
-		viper.SetConfigName(".go_starter_api")
+		viper.SetConfigName(".spsyncpro_api")
 	}
 
 	viper.AutomaticEnv()

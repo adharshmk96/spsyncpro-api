@@ -6,7 +6,7 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
-      POSTGRES_DB: go_starter
+      POSTGRES_DB: spsyncpro
     volumes:
       - ./_container/db_data:/var/lib/postgresql/data
   

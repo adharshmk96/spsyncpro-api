@@ -7,8 +7,8 @@ import (
 	"encoding/base64"
 	"errors"
 	"fmt"
-	"go_starter_api/pkg/domain"
-	"go_starter_api/pkg/mailer"
+	"spsyncpro_api/pkg/domain"
+	"spsyncpro_api/pkg/mailer"
 	"strconv"
 	"strings"
 	"time"
@@ -154,7 +154,7 @@ func (s *AccountService) GenerateAuthToken(ctx context.Context, account *domain.
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"sub": account.ID,
-		"iss": "go_starter_api",
+		"iss": "spsyncpro_api",
 		"iat": time.Now().Unix(),
 		"exp": time.Now().Add(time.Hour * 24).Unix(),
 	})
@@ -204,7 +204,7 @@ func (s *AccountService) GeneratePasswordResetToken(ctx context.Context, account
 
 	token := jwt.NewWithClaims(jwt.SigningMethodHS256, jwt.MapClaims{
 		"sub": strconv.FormatUint(uint64(account.ID), 10) + ":password-reset",
-		"iss": "go_starter_api",
+		"iss": "spsyncpro_api",
 		"iat": time.Now().Unix(),
 		"exp": time.Now().Add(time.Hour * 24).Unix(),
 	})

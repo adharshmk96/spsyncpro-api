@@ -187,7 +187,7 @@ func newResource() (*resource.Resource, error) {
 		context.Background(),
 		resource.WithAttributes(
 			// Service name - this will replace "unknown_service:main"
-			semconv.ServiceNameKey.String("go_starter-api"),
+			semconv.ServiceNameKey.String("spsyncpro-api"),
 			// Service version
 			semconv.ServiceVersionKey.String("1.0.0"),
 			// Service namespace (optional)

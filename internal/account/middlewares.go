@@ -1,9 +1,9 @@
 package account
 
 import (
-	"go_starter_api/pkg/domain"
-	"go_starter_api/pkg/utils"
 	"net/http"
+	"spsyncpro_api/pkg/domain"
+	"spsyncpro_api/pkg/utils"
 
 	"github.com/gin-gonic/gin"
 )

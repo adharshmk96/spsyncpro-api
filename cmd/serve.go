@@ -9,7 +9,7 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"go_starter_api/infra"
+	"spsyncpro_api/infra"
 	"time"
 
 	"github.com/sirupsen/logrus"
@@ -19,7 +19,7 @@ import (
 // serveCmd represents the serve command
 var serveCmd = &cobra.Command{
 	Use:   "serve",
-	Short: "serve the go_starter api",
+	Short: "serve the spsyncpro api",
 	Run: func(cmd *cobra.Command, args []string) {
 		port, err := cmd.Flags().GetInt("port")
 		if err != nil {
